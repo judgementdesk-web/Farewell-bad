@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071b3a">
+<title>Thank You, Gp Capt Manik Bhardwaj | Team ADM</title>
+<style>
+:root{--navy:#071b3a;--blue:#0b2d59;--gold:#e4c477;--white:#f8f7f1;--muted:#c9d3e4}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at top,#173e70 0%,var(--navy) 56%,#030b18 100%);color:var(--white);font-family:Arial,Helvetica,sans-serif;min-height:100vh}
+.wrap{width:min(760px,100%);margin:auto;padding:22px 16px 36px}
+.topline{height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:4px 0 24px}
+.crest{width:76px;height:76px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:0 auto 14px;color:var(--gold);font-size:31px;box-shadow:0 0 28px #e4c47720}
+.kicker{text-align:center;text-transform:uppercase;letter-spacing:3px;font-size:11px;color:var(--gold);font-weight:700}
+h1{text-align:center;font-size:clamp(29px,7vw,51px);line-height:1.05;margin:12px 0 8px;letter-spacing:-1px}
+h1 span{display:block;color:var(--gold)}
+.subtitle{text-align:center;color:var(--muted);font-size:15px;line-height:1.6;margin:0 auto 24px;max-width:520px}
+.card{border:1px solid #e4c47766;border-radius:20px;background:linear-gradient(145deg,#ffffff0d,#ffffff04);padding:20px;box-shadow:0 20px 55px #0005}
+.ribbon{text-align:center;color:var(--navy);background:var(--gold);border-radius:6px;padding:10px 12px;font-weight:800;letter-spacing:1.2px;font-size:12px;text-transform:uppercase;margin-bottom:18px}
+.player{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#020916;border:1px solid #ffffff22}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.playbox{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;background:radial-gradient(circle,#143f73,#030916 80%)}
+.playbtn{border:0;border-radius:999px;background:var(--gold);color:#081a35;font-weight:900;font-size:16px;padding:15px 23px;cursor:pointer;box-shadow:0 7px 24px #0005}
+.playbtn:focus-visible{outline:3px solid white;outline-offset:4px}
+.playhint{font-size:12px;color:var(--muted);margin-top:12px;line-height:1.4}
+.message{padding:24px 8px 6px;text-align:center}
+.message .eyebrow{font-size:11px;letter-spacing:2.2px;color:var(--gold);font-weight:800;text-transform:uppercase}
+.message h2{font-size:clamp(23px,5vw,34px);margin:10px 0 16px;line-height:1.15}
+.message p{font-size:16px;line-height:1.75;color:#edf2fa;margin:10px auto;max-width:560px}
+.highlight{color:var(--gold);font-weight:800}
+.stamp{display:inline-block;border:1px solid #e4c47799;color:var(--gold);border-radius:8px;padding:9px 13px;font-size:11px;letter-spacing:1.5px;font-weight:800;text-transform:uppercase;margin:17px 0 4px}
+.footer{text-align:center;color:#aebbd0;font-size:13px;line-height:1.7;margin-top:22px}
+.stars{color:var(--gold);letter-spacing:9px;font-size:13px;text-align:center;margin:22px 0 0}
+@media(min-width:600px){.wrap{padding-top:34px}.card{padding:28px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="topline"></div>
+  <div class="crest" aria-hidden="true">★</div>
+  <div class="kicker">A special farewell tribute</div>
+  <h1>THANK YOU, <span>SIR!</span></h1>
+  <p class="subtitle">A heartfelt salute to Gp Capt Manik Bhardwaj</p>
+
+  <section class="card" aria-label="Farewell tribute">
+    <div class="ribbon">Security Officer • One of a kind</div>
+    <div class="player" id="player">
+      <div class="playbox" id="playbox">
+        <div style="font-size:36px;margin-bottom:8px" aria-hidden="true">♫</div>
+        <div style="font-weight:800;font-size:18px;margin-bottom:6px">Baadshah O Baadshah</div>
+        <div style="color:#c9d3e4;font-size:13px;margin-bottom:18px">Your farewell soundtrack awaits, Sir.</div>
+        <button class="playbtn" id="play" type="button">▶ TAP TO PLAY</button>
+        <div class="playhint">Tap to start the music. An internet connection is required.</div>
+      </div>
+    </div>
+
+    <div class="message">
+      <div class="eyebrow">With respect and gratitude</div>
+      <h2>Thank You, Gp Capt Manik Bhardwaj! 🫡</h2>
+      <p>Thank you for being a wonderful officer and an exceptional Security Officer. Your leadership, dedication, and ever-watchful eye have set a great example for us all. With you around, not even the smallest detail could escape notice!</p>
+      <p>You will be greatly missed and fondly remembered. Wishing you continued success, happiness, and exciting new adventures ahead!</p>
+      <div class="stamp">Respect • Gratitude • Best Wishes</div>
+    </div>
+  </section>
+
+  <div class="stars" aria-hidden="true">✦ ✦ ✦</div>
+  <div class="footer">With best wishes<br><strong style="color:#e4c477">Team ADM</strong></div>
+</main>
+<script>
+const playButton = document.getElementById('play');
+const playbox = document.getElementById('playbox');
+playButton.addEventListener('click', function () {
+  const frame = document.createElement('iframe');
+  frame.title = 'Baadshah O Baadshah music video';
+  frame.src = 'https://www.youtube-nocookie.com/embed/1XwYoWDvDLA?autoplay=1&rel=0&playsinline=1';
+  frame.allow = 'autoplay; encrypted-media; picture-in-picture; web-share';
+  frame.allowFullscreen = true;
+  playbox.replaceWith(frame);
+});
+</script>
+</body>
+</html>
