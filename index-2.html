@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071b3a">
+<title>A Tribute to Gp Capt Manik Bhardwaj | Team ADM</title>
+<style>
+:root{--navy:#071b3a;--blue:#123967;--gold:#e4c477;--white:#fbf8ef;--muted:#c9d3e4}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at top,#173e70 0%,var(--navy) 58%,#030b18 100%);color:var(--white);font-family:Georgia,'Times New Roman',serif;min-height:100vh}
+.wrap{max-width:760px;margin:auto;padding:22px 16px 34px}
+.line{height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:3px 0 22px}
+.kicker{text-align:center;text-transform:uppercase;letter-spacing:3px;font:700 11px Arial,sans-serif;color:var(--gold)}
+h1{text-align:center;font-size:clamp(29px,7vw,48px);line-height:1.08;margin:12px 0 8px;color:var(--gold)}
+.subtitle{text-align:center;color:var(--muted);font:15px/1.6 Arial,sans-serif;margin:0 auto 22px}
+.card{border:1px solid #e4c47788;border-radius:20px;padding:17px;background:linear-gradient(145deg,#ffffff10,#ffffff04);box-shadow:0 18px 50px #0005}
+.photo-wrap{border:2px solid var(--gold);border-radius:13px;overflow:hidden;background:#0a1730}
+.photo{display:block;width:100%;height:auto;max-height:520px;object-fit:contain;background:#0a1730}
+.caption{text-align:center;color:var(--gold);font:700 12px Arial,sans-serif;letter-spacing:1.5px;text-transform:uppercase;margin:13px 0 18px}
+.music{border:1px solid #e4c47788;border-radius:13px;padding:14px;text-align:center;background:#071b3a;margin-bottom:18px}
+.music-title{font:700 16px Arial,sans-serif;color:var(--gold)}
+.music-note{font:12px/1.5 Arial,sans-serif;color:var(--muted);margin:7px 0 12px}
+button{border:0;border-radius:999px;background:var(--gold);color:#071b3a;font:800 14px Arial,sans-serif;padding:13px 20px;cursor:pointer}
+.message{text-align:center;padding:5px 5px 2px}
+.message h2{font-size:clamp(22px,5vw,31px);line-height:1.2;margin:12px 0 16px}
+.message p{font-size:16px;line-height:1.75;margin:12px auto;max-width:600px;color:#f2f4f8}
+.highlight{color:var(--gold);font-weight:bold}
+.signature{margin-top:22px;color:var(--gold);font-size:20px;line-height:1.6}
+.signature strong{display:block;font-size:18px}
+.footer{text-align:center;color:#aebbd0;font:11px/1.6 Arial,sans-serif;margin-top:18px}
+#yt-player{position:absolute;width:1px;height:1px;left:-10000px;top:-10000px;border:0}
+@media(min-width:600px){.wrap{padding-top:30px}.card{padding:24px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="line"></div>
+  <div class="kicker">A special farewell tribute</div>
+  <h1>THE ORIGINAL BAADSHAH</h1>
+  <p class="subtitle">A heartfelt salute to Gp Capt Manik Bhardwaj</p>
+
+  <section class="card">
+    <div class="photo-wrap">
+      <img class="photo" src="manik-bhardwaj.jpg" alt="Gp Capt Manik Bhardwaj at his desk">
+    </div>
+    <div class="caption">A leader • A gentleman • Our Security Officer</div>
+
+    <div class="music">
+      <div class="music-title">♫ Baadshah O Baadshah</div>
+      <div class="music-note" id="music-note">Trying to start the farewell soundtrack… If your phone blocks automatic playback, tap below.</div>
+      <button id="play-button" type="button">▶ PLAY FAREWELL SONG</button>
+    </div>
+
+    <div class="message">
+      <h2>Thank You, Gp Capt Manik Bhardwaj! 🫡</h2>
+      <p>Thank you for being a wonderful officer and an exceptional Security Officer. Your leadership, dedication, and ever-watchful eye have set a remarkable example. With you around, not even the smallest detail could escape inspection!</p>
+      <p>You leave behind cherished memories, valuable lessons, and the admiration of Team ADM. You will be greatly missed and fondly remembered.</p>
+      <p class="highlight">And of course, with <em>Baadshah O Baadshah</em> playing, there can be no doubt about who the real Baadshah is!</p>
+      <div class="signature">With best wishes<strong>Team ADM</strong></div>
+    </div>
+  </section>
+  <div class="footer">With respect, gratitude and best wishes</div>
+</main>
+<iframe id="yt-player" title="Farewell song" allow="autoplay; encrypted-media"></iframe>
+<script>
+const songUrl = 'https://www.youtube-nocookie.com/embed/1XwYoWDvDLA?autoplay=1&controls=0&loop=1&playlist=1XwYoWDvDLA&playsinline=1&rel=0';
+const player = document.getElementById('yt-player');
+const note = document.getElementById('music-note');
+const button = document.getElementById('play-button');
+let started = false;
+function startSong() {
+  if (started) return;
+  started = true;
+  player.src = songUrl;
+  note.textContent = 'If the music does not start, your browser may require another tap or YouTube may be unavailable.';
+  button.textContent = '♫ SONG REQUESTED';
+}
+window.addEventListener('load', () => {
+  // Attempt autoplay; mobile browsers may block sound until a user gesture.
+  player.src = songUrl;
+  started = true;
+});
+button.addEventListener('click', () => {
+  player.src = songUrl;
+  note.textContent = 'The song has been requested. Playback depends on browser and YouTube settings.';
+  button.textContent = '♫ PLAY REQUESTED';
+});
+</script>
+</body>
+</html>
